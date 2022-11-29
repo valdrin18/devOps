@@ -16,7 +16,6 @@ jobs:
     - name: docker build
       run: |
         docker build . --tag ghcr.io/valdrin18/nginx-ready:latest
-        docker run ghcr.io/valdrin18/nginx-ready:latest
         docker push ghcr.io/valdrin18/nginx-ready:latest
      
     
