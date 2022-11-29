@@ -1,0 +1,23 @@
+name: Docker Series Build
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Login to GitHub Container Registry
+      uses: docker/login-action@v1
+      with:
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+    - name: docker build
+      run: |
+        docker build . --tag ghcr.io/valdrin18/nginx-ready:latest
+        docker run ghcr.io/valdrin18/nginx-ready:latest
+        docker push ghcr.io/valdrin18/nginx-ready:latest
+     
+    
+      
