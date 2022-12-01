@@ -1,4 +1,4 @@
-
+#!/bin/sh
 # sum shell script
 
 read -p "Enter first number: " a
