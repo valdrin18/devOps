@@ -1,4 +1,10 @@
 #!/bin/sh
  
-sum=$(($1 + $2))
-echo "sum = $sum"
+read -p a
+read -p b
+
+sum=$(($a + $b))
+ 
+echo "Sum is: $sum" 
+ 
+
