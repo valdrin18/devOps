@@ -1,7 +1,7 @@
 #!/bin/bash
  
-read a
-read b
+read -r a
+read -r b
 
 echo "$a+$b=$((a+b))"
 
