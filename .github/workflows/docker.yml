@@ -17,6 +17,13 @@ jobs:
       run: |
         docker build . --tag ghcr.io/valdrin18/nginx-ready:latest
         docker push ghcr.io/valdrin18/nginx-ready:latest
+  shellcheck:
+    name: Task for Shell Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run ShellChecking
+        uses: ludeeus/action-shellcheck@master
      
     
       
