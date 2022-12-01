@@ -1,9 +1,4 @@
 #!/bin/sh
-# sum shell script
-
-read -p "Enter first number: " a
-read -p "Enter second number: " b
-
-sum=$(($a + $b))
  
-echo "Sum is: $sum"  
+sum=$(($1 + $2))
+echo "sum = $sum"
